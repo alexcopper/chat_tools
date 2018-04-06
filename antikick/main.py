@@ -11,13 +11,13 @@ WHITELIST_FILE = 'whitelist.txt'
 def main():
     if not os.path.exists(ACCOUNTS_FILE):
         open(ACCOUNTS_FILE, 'a').close()
-        print 'accounts.txt created! fill it and re-run the script'
+        print('accounts.txt created! fill it and re-run the script')
         return
     else:
         with open(ACCOUNTS_FILE, 'r') as file:
             accounts = [line.strip().split(':') for line in file if line.strip()]
     if not os.path.exists(WHITELIST_FILE):
-        print 'whitelist.txt not found, returning only bots themselves.'
+        print('whitelist.txt not found, returning only bots themselves.')
         open(WHITELIST_FILE, 'a').close()
     else:
         with open(WHITELIST_FILE, 'r') as file:
