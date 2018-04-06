@@ -32,9 +32,9 @@ class VKThread(threading.Thread):
             api['api'] = vk_session.get_api()
             api['vk_session'] = vk_session
             api['success'] = 1
-            print '### auth {0} success! ###'.format(login)
+            print('### auth {0} success! ###'.format(login))
         except vk_api.AuthError as error_message:
-            print '{0}: {1}'.format(self.login, str(error_message))
+            print('{0}: {1}'.format(self.login, str(error_message)))
             api['success'] = 0
         return api
     
